@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Quiz — Login</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="index" style="background:linear-gradient(135deg,#ff80ab,#7e57c2);">
+  <div class="auth-wrap">
+    <div class="auth-container">
+      <div class="title">AI Quiz — Login</div>
+      <input id="username" placeholder="Username or email">
+      <input id="password" type="password" placeholder="Password">
+      <div style="margin-top:8px">
+        <button id="loginBtn">Login</button>
+      </div>
+      <div class="auth-redirect">Don't have an account? <a href="signup.html" style="color:#fff;text-decoration:underline">Sign up</a></div>
+      <div class="auth-redirect" style="margin-top:8px"><a href="admin.html" style="color:#ffd166">Admin</a></div>
+      <!-- optional hidden form to allow Enter key submit -->
+      <form id="loginForm" class="hide">
+        <input id="dummy" />
+        <button type="submit">dummy</button>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

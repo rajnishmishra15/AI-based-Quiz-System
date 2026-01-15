@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Quiz — Dashboard</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="dashboard" style="background:linear-gradient(135deg,#ff80ab,#7e57c2);">
+  <div class="container dashboard">
+    <div class="row" style="gap:18px;align-items:flex-start">
+      <div style="flex:1" class="card">
+        <div class="title">Welcome</div>
+        <div id="welcomeText" class="center"></div>
+        <div style="margin-top:12px" class="col">
+          <button id="startQuiz" class="small">Go to Subjects (Quiz)</button>
+          <button id="goLeaderboard" class="small secondary">Leaderboard</button>
+          <button id="logoutBtn" class="small secondary">Logout</button>
+        </div>
+      </div>
+      <div style="width:320px" class="card">
+        <div class="title">Quick Info</div>
+        <div>Saved Questions: <span id="qcount" class="badge"></span></div>
+        <div style="margin-top:8px">Attempts: <span id="attempts" class="badge"></span></div>
+        <div style="margin-top:12px;font-size:13px;opacity:0.9">Admin: <b>admin</b> / <b>admin123</b></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

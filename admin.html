@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin — AI Quiz</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="admin" style="background:linear-gradient(135deg,#7e57c2,#ff80ab);">
+  <div class="container">
+    <div id="adminLoginCard" class="card center" style="max-width:740px;margin:auto">
+      <div class="title">Admin Login</div>
+      <input id="adminUser" placeholder="Admin Username">
+      <input id="adminPass" placeholder="Admin Password" type="password">
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button id="adminLoginBtn">Login</button>
+        <button onclick="location.href='index.html'" class="secondary">Back</button>
+      </div>
+      <div style="margin-top:8px;color:rgba(255,255,255,0.8)">Default: <b>admin</b> / <b>admin123</b></div>
+    </div>
+    <div id="adminPanel" class="card hide" style="max-width:900px;margin:auto;margin-top:14px">
+      <div class="title">Admin Panel</div>
+      <div class="col">
+        <label>Subject</label>
+        <input id="adm_subject" placeholder="e.g. maths">
+        <label>Question</label>
+        <textarea id="adm_question" placeholder="Question text"></textarea>
+        <label>Options (comma separated)</label>
+        <input id="adm_options" placeholder="opt1,opt2,opt3,opt4">
+        <label>Answer (must match exactly)</label>
+        <input id="adm_answer" placeholder="Correct option">
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="addQBtn">Add Question</button>
+          <button id="genQBtn" class="secondary">AI Generate</button>
+          <button id="signoutBtn" class="secondary">Sign Out</button>
+        </div>
+        <div style="margin-top:12px">
+          <div class="title" style="font-size:16px">Existing Questions</div>
+          <div id="existingList" style="max-height:300px;overflow:auto;margin-top:8px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

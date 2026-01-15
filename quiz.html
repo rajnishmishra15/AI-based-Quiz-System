@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Quiz</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="quiz" style="background:linear-gradient(135deg,#ff80ab,#7e57c2);">
+  <div class="container">
+    <div class="row" style="gap:18px">
+      <div style="flex:1" class="card">
+        <div class="title" id="subjectTitle">Choose Subject</div>
+        <div id="controls" class="row" style="margin-top:12px;align-items:center">
+          <div class="badge">Time: <span id="timeInfo">10</span>s</div>
+          <div class="spacer"></div>
+          <div class="badge">Negative: <span id="negMark">-0.25</span></div>
+        </div>
+        <div id="questionArea" style="margin-top:14px">
+          <div id="question" style="font-weight:700;font-size:18px">Select a subject to start</div>
+          <div id="options"></div>
+          <div class="row" style="margin-top:12px">
+            <button id="prevBtn" class="secondary small hide">Prev</button>
+            <div class="spacer"></div>
+            <button id="nextBtn" class="small hide">Next</button>
+          </div>
+        </div>
+      </div>
+      <div style="width:340px" class="card">
+        <div class="title">Subjects</div>
+        <div id="subjectsGrid" class="grid"></div>
+        <div style="margin-top:12px" class="col">
+          <button id="btnRestart" class="secondary small">Back to Subjects</button>
+          <button id="btnFinish" class="small" style="margin-top:6px">Finish Quiz</button>
+        </div>
+        <div style="margin-top:14px">
+          <div>Current Score: <span id="liveScore" class="badge">0</span></div>
+          <div style="margin-top:8px">Question: <span id="qnIndex" class="badge">0/0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
