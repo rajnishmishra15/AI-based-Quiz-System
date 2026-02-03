@@ -264,7 +264,7 @@ function initLeaderboard(){
 
 /* ---------- ADMIN ---------- */
 function initAdmin(){
-  const ADMIN_USER='admin', ADMIN_PASS='admin123';
+  const ADMIN_USER='admin', ADMIN_PASS='Admin2004';
   const loginCard=document.getElementById('adminLoginCard'), panel=document.getElementById('adminPanel');
   document.getElementById('adminLoginBtn').addEventListener('click', ()=>{ const u=document.getElementById('adminUser').value.trim(), p=document.getElementById('adminPass').value.trim(); if(u===ADMIN_USER && p===ADMIN_PASS){ loginCard.classList.add('hide'); panel.classList.remove('hide'); loadExisting(); } else alert('Invalid admin credentials'); });
   document.getElementById('signoutBtn').addEventListener('click', ()=>{ panel.classList.add('hide'); loginCard.classList.remove('hide'); });
@@ -278,3 +278,4 @@ function initAdmin(){
   window.deleteQ = function(subj, idx){ if(!confirm('Delete this question?')) return; const qdb=readDB(); qdb[subj].splice(idx,1); if(qdb[subj].length===0) delete qdb[subj]; saveDB(qdb); loadExisting(); };
   loadExisting();
 }
+
