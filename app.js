@@ -1,11 +1,10 @@
-// app.js - clean shared logic
+
 const KEY_Q = 'aq_questions';
 const KEY_USERS = 'aq_users';
 const KEY_CURRENT = 'aq_currentUser';
 const KEY_BOARD = 'leaderboard';
 const KEY_LAST = 'aq_lastResult';
 
-/* -------- seed defaults (only first time) -------- */
 function seedDefaults(){
   if(localStorage.getItem(KEY_Q)) return;
   const defaultQuestions = {
@@ -278,4 +277,5 @@ function initAdmin(){
   window.deleteQ = function(subj, idx){ if(!confirm('Delete this question?')) return; const qdb=readDB(); qdb[subj].splice(idx,1); if(qdb[subj].length===0) delete qdb[subj]; saveDB(qdb); loadExisting(); };
   loadExisting();
 }
+
 
